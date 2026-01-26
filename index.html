@@ -405,6 +405,76 @@
             color: var(--text-dark);
         }
 
+        /* Sponsor Logos */
+        .sponsor-logos {
+            margin: 40px auto 30px;
+            max-width: 1000px;
+        }
+
+        .sponsor-logos h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 200px;
+            height: 100px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .logo-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+        }
+
+        .logo-item img:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 25px;
+            }
+
+            .logo-item {
+                max-width: 150px;
+                height: 80px;
+            }
+
+            .logo-item img {
+                max-height: 60px;
+            }
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             h1 {
@@ -592,6 +662,33 @@
             <p class="sponsors">
                 The event is organised and sponsored by the Swiss Plasma Center at the École Polytechnique Fédérale de Lausanne (EPFL), Switzerland, the Piero Caldirola International Centre for the Promotion of Science and the International School of Plasma Physics (ICPC), led by Prof. E. Sindoni (Honorary President) and Prof. Giuseppe Gorini (President). Additional support is provided by the Istituto per la Scienza e la Tecnologia dei Plasmi (CNR) in Milan and the Università degli Studi di Milano-Bicocca, Italy.
             </p>
+            
+            <div class="sponsor-logos">
+                <h3>Organised and Sponsored By</h3>
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <!-- Logo placeholder: EPFL Swiss Plasma Center -->
+                        <img src="logos/epfl-logo.png" alt="EPFL Swiss Plasma Center" style="display: none;">
+                        <span style="opacity: 0.6; font-size: 0.85rem;">EPFL Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: Piero Caldirola Centre -->
+                        <img src="logos/icpc-logo.png" alt="Piero Caldirola International Centre" style="display: none;">
+                        <span style="opacity: 0.6; font-size: 0.85rem;">ICPC Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: CNR -->
+                        <img src="logos/cnr-logo.png" alt="Istituto per la Scienza e la Tecnologia dei Plasmi" style="display: none;">
+                        <span style="opacity: 0.6; font-size: 0.85rem;">CNR Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: Milano-Bicocca -->
+                        <img src="logos/milano-bicocca-logo.png" alt="Università degli Studi di Milano-Bicocca" style="display: none;">
+                        <span style="opacity: 0.6; font-size: 0.85rem;">Milano-Bicocca Logo</span>
+                    </div>
+                </div>
+            </div>
+            
             <div class="contact">
                 <a href="mailto:varenna-lausanne@epfl.ch">Contact: varenna-lausanne@epfl.ch</a>
             </div>
