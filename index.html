@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joint Varenna–Lausanne International Workshop on the Theory of Fusion Plasmas - A biennial scientific meeting devoted to the theory of magnetic-confinement fusion plasmas">
+    <meta name="keywords" content="fusion plasmas, Varenna, Lausanne, workshop, theory, magnetic confinement, plasma physics, EPFL">
+    <title>Varenna-Lausanne Workshop - Theory of Fusion Plasmas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0074D9;
+            --primary-dark: #005BAD;
+            --primary-light: #BFE6FF;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6a6a6a;
+            --background: #ffffff;
+            --background-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent: #0074D9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.95;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .location-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .location-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Main content */
+        .intro {
+            padding: 60px 20px;
+            background: var(--background);
+        }
+
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+            text-align: center;
+        }
+
+        /* Info sections */
+        .info-grid {
+            padding: 60px 20px;
+            background: var(--background-light);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            color: var(--text-medium);
+        }
+
+        .info-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .deadline {
+            margin-bottom: 10px;
+            color: var(--text-medium);
+        }
+
+        .deadline strong {
+            color: var(--text-dark);
+        }
+
+        /* Image section */
+        .images {
+            padding: 60px 20px;
+            background: var(--primary-light);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .image-card {
+            text-align: center;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-style: italic;
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: var(--text-medium);
+        }
+
+        /* Guidelines section */
+        .guidelines {
+            padding: 60px 20px;
+            background: var(--background);
+        }
+
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guideline-card {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .guideline-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .guideline-card p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .guideline-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .guideline-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Registration section */
+        .registration {
+            padding: 60px 20px;
+            background: var(--background-light);
+        }
+
+        .registration h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .registration-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .fee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .fee-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .fee-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .fee-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .bank-details {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .bank-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .bank-details p {
+            margin-bottom: 10px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .bank-info {
+            background: var(--background-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .bank-info p {
+            margin: 5px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+
+        /* Committee section */
+        .committee {
+            padding: 60px 20px;
+            background: var(--background);
+        }
+
+        .committee h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .committee-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-medium);
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .committee-list {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .committee-list p {
+            margin-bottom: 8px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .committee-list strong {
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .sponsors {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            opacity: 0.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .contact {
+            margin-top: 30px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .contact a:hover {
+            background: white;
+            color: var(--text-dark);
+        }
+
+        /* Sponsor Logos */
+        .sponsor-logos {
+            margin: 40px auto 30px;
+            max-width: 1000px;
+        }
+
+        .sponsor-logos h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 200px;
+            height: 100px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .logo-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+        }
+
+        .logo-item img:hover {
+            opacity: 1;
+        }
+
+        .logo-placeholder {
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        .logo-item img[src*=".png"],
+        .logo-item img[src*=".jpg"],
+        .logo-item img[src*=".svg"] {
+            display: block;
+        }
+
+        .logo-item img[src*=".png"] ~ .logo-placeholder,
+        .logo-item img[src*=".jpg"] ~ .logo-placeholder,
+        .logo-item img[src*=".svg"] ~ .logo-placeholder {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 25px;
+            }
+
+            .logo-item {
+                max-width: 150px;
+                height: 80px;
+            }
+
+            .logo-item img {
+                max-height: 60px;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .intro-text {
+                font-size: 1rem;
+            }
+
+            .grid,
+            .guidelines-grid,
+            .committee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fee-amount {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Theory of Fusion Plasmas</h1>
+            <p class="subtitle">Joint Varenna-Lausanne International Workshop, since 1988</p>
+            <p>"Piero Caldirola" International Centre for the Promotion of Science<br>International School of Plasma Physics</p>
+            <a href="https://www.villamonastero.eu/en/home_en/" class="location-btn">Location: Villa Monastero, Varenna, Italy</a>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <p class="intro-text">
+                The Joint Varenna–Lausanne Workshop is a biennial scientific meeting devoted to the theory of magnetic-confinement fusion plasmas, bringing together senior, early career, and student researchers to review and discuss advances in the theory of magnetic confinement systems. Organized and sponsored by EPFL's <em>Swiss Plasma Center</em>, together with the <em>Piero Caldirola International Center for the Promotion of Science and International School of Plasma Physics</em>, the <em>Università degli Studi di Milano-Bicocca</em>, and the <em>Istituto per la Scienza e la Tecnologia dei Plasmi</em>. The workshop features invited talks and contributed poster presentations, and publishes contributions in refereed special issues of <em>Plasma Physics and Controlled Fusion</em>.
+            </p>
+        </div>
+    </section>
+
+    <section class="info-grid">
+        <div class="grid">
+            <div class="info-card">
+                <h2>Workshop Focus</h2>
+                <p style="margin-bottom: 15px; color: var(--text-dark);"><strong>Theory of Magnetic Confinement Systems</strong></p>
+                <ul>
+                    <li>Anomalous Transport (Turbulence, Coherent Structures, Microinstabilities)</li>
+                    <li>RF Heating and Current Drive</li>
+                    <li>Non Axisymmetric Configurations</li>
+                    <li>Macroinstabilities and Magnetic Reconnection</li>
+                    <li>Theoretical Aspects of Plasma-Edge Physics and Divertors</li>
+                    <li>Theoretical issues related to burning plasmas</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Next Meeting</h3>
+                <p style="font-size: 1.2rem; font-weight: 600; color: var(--primary-color); margin-bottom: 20px;">September 21 – 25, 2026</p>
+                
+                <h3 style="margin-top: 25px;">Important Deadlines</h3>
+                <div class="deadline"><strong>Applications & Abstract:</strong> June 14th, 2024</div>
+                <div class="deadline"><strong>Payment:</strong> July 19th, 2024</div>
+                <div class="deadline"><strong>Paper draft (poster presenters):</strong> August 26th, 2024</div>
+                <div class="deadline"><strong>Paper draft (invited speakers):</strong> End of 2024</div>
+            </div>
+
+            <div class="info-card">
+                <h2>Papers and Proceedings</h2>
+                <p>Published in <a href="https://iopscience.iop.org/journal/0741-3335" target="_blank">Plasma Physics and Controlled Fusion</a> following the conference. Papers are refereed (partially) open by participants, a long-standing tradition of the Varenna conference.</p>
+                <p style="margin-top: 15px;">The issue will be edited by P. Helander and J. P. Graves, and papers will appear online shortly after acceptance.</p>
+                <p style="margin-top: 15px;"><em>Please use the PPCF author guidelines and templates, and when submitting, select the special issue titled: "Special issue on the 2026 joint Varenna–Lausanne International Workshop on the Theory of Fusion Plasmas."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="images">
+        <div class="image-grid">
+            <div class="image-card">
+                <div class="image-placeholder">View of Villa Monastero</div>
+                <p class="image-caption">View of Villa Monastero</p>
+            </div>
+            <div class="image-card">
+                <div class="image-placeholder">View of Lake Como</div>
+                <p class="image-caption">View of Lake Como</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guidelines">
+        <div class="guidelines-grid">
+            <div class="guideline-card">
+                <h3>Abstracts</h3>
+                <p>Abstracts are required to be one page, following Word or LaTeX templates used for IOP proceedings papers (remove everything except title, authors, affiliations, abstract body and references). <a href="https://publishingsupport.iopscience.iop.org/author-guidelines-for-conference-proceedings/" target="_blank">An IOP proceedings template is provided here</a>.</p>
+                <p style="margin-top: 15px;">Once your abstract is finalised, <a href="https://forms.gle/Y15XFBtWKTrL5iXB6" target="_blank">please submit through this form</a>.</p>
+            </div>
+
+            <div class="guideline-card">
+                <h3>Posters</h3>
+                <p>Poster boards are made of cork and measure 150 cm (width) × 100 cm (height). Printing in A0 landscape format is ideal.</p>
+                <p style="margin-top: 15px;">Posters printed in A0 portrait format will fit, but approximately 20 cm at the bottom cannot be attached to the board; please note that this portion may curl after being rolled in a carrying tube. Pins will be provided for attaching posters.</p>
+                <p style="margin-top: 15px;">Electronic copies do not need to be submitted to the conference, and authors are free to choose their own formatting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration">
+        <div class="container">
+            <h2>Registration Fee and Payment Details</h2>
+            <p class="registration-intro">
+                The fee covers admission to the workshop and social events, where students enjoy a reduced cost. Pay by bank transfer before the deadline indicated above. All bank expenses are at participants' charge. Should the net amount transferred to the bank account be less than the requested amount, the difference will be charged to participants at the conference. Alternatively, <strong>cash payment</strong> is accepted at the Varenna registration desk. <strong>Credit cards cannot be accepted for payment of the registration fee.</strong>
+            </p>
+
+            <div class="fee-grid">
+                <div class="fee-card">
+                    <div class="fee-label">Full Fee</div>
+                    <div class="fee-amount">€600</div>
+                </div>
+                <div class="fee-card">
+                    <div class="fee-label">Student Fee</div>
+                    <div class="fee-amount">€350</div>
+                </div>
+            </div>
+
+            <div class="bank-details">
+                <h3>Bank Transfer Instructions</h3>
+                <p><strong>State as motivation of payment:</strong><br>«Your full name» - Participation "Theory 2026"</p>
+                
+                <div class="bank-info">
+                    <p><strong>Bank:</strong> Banca Popolare di Sondrio, Italy</p>
+                    <p><strong>Account:</strong> International Center Piero Caldirola</p>
+                    <p><strong>IBAN:</strong> IT40B0569651490000041377X47</p>
+                    <p><strong>SWIFT:</strong> POSOIT22XXX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="committee">
+        <div class="container">
+            <h2>Varenna–Lausanne 2026 Conference Committees</h2>
+            <p class="committee-intro">
+                The Scientific Committee selects speakers based on scientific excellence, while aiming to ensure a balanced program that reflects diversity in geographical location, professional background, and gender. The following lists show the current members of the Scientific Committee, in alphabetical order.
+            </p>
+            <div class="committee-grid">
+                <div class="committee-list">
+                    <p>D. BORBA (Lisbon, Portugal)</p>
+                    <p>E. BELLI (California General Atomics, USA)</p>
+                    <p>I. CALVO (Madrid, Spain)</p>
+                    <p>L. FIGINI (Milan, Italy)</p>
+                    <p>G. FU (Zhejiang, China)</p>
+                    <p>T. FÜLÖP (Chalmers, Sweden)</p>
+                    <p>X. GARBET (Cadarache, France and NTU, Singapore)</p>
+                    <p>R. GANESH (Bhat, IPR, India)</p>
+                    <p>J.P. GRAVES (EPFL, CH and York, UK), <strong>Scientific Director</strong></p>
+                    <p>C.J. HAM (Culham, UK)</p>
+                    <p>P. HELANDER (Greifswald, Germany), <strong>Chairman</strong></p>
+                    <p>S. HUDSON (Proxima Fusion, Germany)</p>
+                    <p>M. HOLE (Canberra, Australia)</p>
+                </div>
+                <div class="committee-list">
+                    <p>Y. KISHIMOTO (Naka, Japan)</p>
+                    <p>M. MURAGLIA (Marseille, France)</p>
+                    <p>R. MACKENBACH (EPFL, CH)</p>
+                    <p>S. L. NEWTON (Culham, UK)</p>
+                    <p>V.P. PASTUKHOV (Moscow, Russian Federation)</p>
+                    <p>E. POLI (Garching, Germany)</p>
+                    <p>F. PORCELLI (Torino, Italy)</p>
+                    <p>O. SAUTER (EPFL, CH)</p>
+                    <p>D. TSKHAKAYA (Prague, Czech Republic)</p>
+                    <p>F. WAELBROECK (Austin, USA)</p>
+                    <p>H.R. WILSON (UKIFS, UK)</p>
+                    <p>A. WRIGHT (Wisconsin, USA)</p>
+                    <p>F. ZONCA (Frascati, Italy)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="sponsors">
+                The event is organised and sponsored by the Swiss Plasma Center at the École Polytechnique Fédérale de Lausanne (EPFL), Switzerland, the Piero Caldirola International Centre for the Promotion of Science and the International School of Plasma Physics (ICPC), led by Prof. E. Sindoni (Honorary President) and Prof. Giuseppe Gorini (President). Additional support is provided by the Istituto per la Scienza e la Tecnologia dei Plasmi (CNR) in Milan and the Università degli Studi di Milano-Bicocca, Italy.
+            </p>
+            
+            <div class="sponsor-logos">
+                <h3>Organised and Sponsored By</h3>
+                <div class="logo-grid">
+                    <div class="logo-item">
+                        <!-- Logo placeholder: EPFL Swiss Plasma Center -->
+                        <img src="logos/epfl-logo.png" alt="EPFL Swiss Plasma Center" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">EPFL Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: Piero Caldirola Centre -->
+                        <img src="logos/icpc-logo.png" alt="Piero Caldirola International Centre" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">ICPC Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: CNR -->
+                        <img src="logos/cnr-logo.png" alt="Istituto per la Scienza e la Tecnologia dei Plasmi" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">CNR Logo</span>
+                    </div>
+                    <div class="logo-item">
+                        <!-- Logo placeholder: Milano-Bicocca -->
+                        <img src="logos/milano-bicocca-logo.png" alt="Università degli Studi di Milano-Bicocca" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">Milano-Bicocca Logo</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <a href="mailto:varenna-lausanne@epfl.ch">Contact: varenna-lausanne@epfl.ch</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
