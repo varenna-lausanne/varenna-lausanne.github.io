@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varenna–Lausanne Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+            font-size: 1.8rem;
+        }
+
+        section h3 {
+            color: #34495e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .organizers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .organizer {
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+
+        .organizer h4 {
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .organizer p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .organizers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Varenna–Lausanne Workshop</h1>
+        <p class="subtitle">Biennial Joint Workshop Series</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#location">Location & Dates</a>
+        <a href="#program">Program</a>
+        <a href="#registration">Registration</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About the Workshop</h2>
+            <p>
+                The Varenna–Lausanne Workshop is a prestigious biennial joint workshop that brings together leading researchers, 
+                academics, and practitioners from around the world. This workshop series fosters collaboration and knowledge 
+                exchange between the research communities of Varenna and Lausanne, two centers of academic excellence.
+            </p>
+            <p>
+                Our workshops provide a unique platform for discussing cutting-edge research, sharing innovative ideas, 
+                and building lasting international collaborations. Participants have the opportunity to engage in in-depth 
+                discussions, attend keynote presentations, and network with peers in an intimate and intellectually 
+                stimulating environment.
+            </p>
+        </section>
+
+        <section id="location">
+            <h2>Location & Dates</h2>
+            
+            <h3>Venue</h3>
+            <div class="info-box">
+                <p><strong>Location:</strong> Alternates between Varenna, Italy and Lausanne, Switzerland</p>
+                <p><strong>Next Edition:</strong> Details to be announced</p>
+            </div>
+
+            <h3>About the Locations</h3>
+            <p>
+                <strong>Varenna, Italy:</strong> A picturesque town on the eastern shore of Lake Como, Varenna provides 
+                a serene and inspiring setting for academic exchange. The town is renowned for its natural beauty and 
+                historic charm.
+            </p>
+            <p>
+                <strong>Lausanne, Switzerland:</strong> Home to world-class research institutions, Lausanne sits on the 
+                shores of Lake Geneva and offers a vibrant international atmosphere with excellent conference facilities.
+            </p>
+        </section>
+
+        <section id="program">
+            <h2>Program</h2>
+            <p>
+                The workshop program typically includes:
+            </p>
+            <ul>
+                <li><strong>Keynote Lectures</strong> - Presentations by distinguished speakers on current research topics</li>
+                <li><strong>Contributed Talks</strong> - Presentations by participants on their latest research</li>
+                <li><strong>Poster Sessions</strong> - Interactive displays of ongoing research projects</li>
+                <li><strong>Discussion Panels</strong> - Collaborative sessions on emerging challenges and opportunities</li>
+                <li><strong>Networking Events</strong> - Social activities to foster collaboration and exchange</li>
+            </ul>
+            <div class="info-box">
+                <p><strong>Note:</strong> The detailed program for the next workshop will be published closer to the event date.</p>
+            </div>
+        </section>
+
+        <section id="registration">
+            <h2>Registration</h2>
+            <p>
+                Registration information for the next workshop will be available soon. The workshop welcomes participants 
+                from academia, industry, and research institutions.
+            </p>
+            
+            <h3>Important Dates</h3>
+            <div class="info-box">
+                <p><strong>Abstract Submission Deadline:</strong> To be announced</p>
+                <p><strong>Registration Deadline:</strong> To be announced</p>
+                <p><strong>Workshop Dates:</strong> To be announced</p>
+            </div>
+
+            <p>
+                <strong>Please check back for updates</strong> or contact the organizers to be added to the mailing list 
+                for workshop announcements.
+            </p>
+        </section>
+
+        <section id="organizers">
+            <h2>Organizers</h2>
+            <p>
+                The workshop is organized through the collaborative efforts of researchers from both Varenna and Lausanne.
+            </p>
+            
+            <div class="organizers">
+                <div class="organizer">
+                    <h4>Varenna Team</h4>
+                    <p>Details to be announced</p>
+                </div>
+                <div class="organizer">
+                    <h4>Lausanne Team</h4>
+                    <p>Details to be announced</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Scientific Committee</h3>
+            <p>The scientific committee will be announced prior to the next workshop edition.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>
+                For inquiries about the workshop, please contact the organizing committee:
+            </p>
+            <div class="info-box">
+                <p><strong>Email:</strong> To be announced</p>
+                <p><strong>Mailing List:</strong> Subscribe for updates (details coming soon)</p>
+            </div>
+            <p>
+                Follow us for the latest news and announcements about upcoming workshop editions.
+            </p>
+        </section>
+
+        <section id="past-workshops">
+            <h2>Past Workshops</h2>
+            <p>
+                Information about previous editions of the Varenna–Lausanne Workshop will be added here, including 
+                programs, presentations, and outcomes from past events.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Varenna–Lausanne Workshop Series</p>
+        <p>Biennial Joint Workshop</p>
+    </footer>
+</body>
+</html>
