@@ -459,6 +459,23 @@
             opacity: 1;
         }
 
+        .logo-placeholder {
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        .logo-item img[src*=".png"],
+        .logo-item img[src*=".jpg"],
+        .logo-item img[src*=".svg"] {
+            display: block;
+        }
+
+        .logo-item img[src*=".png"] ~ .logo-placeholder,
+        .logo-item img[src*=".jpg"] ~ .logo-placeholder,
+        .logo-item img[src*=".svg"] ~ .logo-placeholder {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .logo-grid {
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -668,23 +685,23 @@
                 <div class="logo-grid">
                     <div class="logo-item">
                         <!-- Logo placeholder: EPFL Swiss Plasma Center -->
-                        <img src="logos/epfl-logo.png" alt="EPFL Swiss Plasma Center" style="display: none;">
-                        <span style="opacity: 0.6; font-size: 0.85rem;">EPFL Logo</span>
+                        <img src="logos/epfl-logo.png" alt="EPFL Swiss Plasma Center" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">EPFL Logo</span>
                     </div>
                     <div class="logo-item">
                         <!-- Logo placeholder: Piero Caldirola Centre -->
-                        <img src="logos/icpc-logo.png" alt="Piero Caldirola International Centre" style="display: none;">
-                        <span style="opacity: 0.6; font-size: 0.85rem;">ICPC Logo</span>
+                        <img src="logos/icpc-logo.png" alt="Piero Caldirola International Centre" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">ICPC Logo</span>
                     </div>
                     <div class="logo-item">
                         <!-- Logo placeholder: CNR -->
-                        <img src="logos/cnr-logo.png" alt="Istituto per la Scienza e la Tecnologia dei Plasmi" style="display: none;">
-                        <span style="opacity: 0.6; font-size: 0.85rem;">CNR Logo</span>
+                        <img src="logos/cnr-logo.png" alt="Istituto per la Scienza e la Tecnologia dei Plasmi" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">CNR Logo</span>
                     </div>
                     <div class="logo-item">
                         <!-- Logo placeholder: Milano-Bicocca -->
-                        <img src="logos/milano-bicocca-logo.png" alt="Università degli Studi di Milano-Bicocca" style="display: none;">
-                        <span style="opacity: 0.6; font-size: 0.85rem;">Milano-Bicocca Logo</span>
+                        <img src="logos/milano-bicocca-logo.png" alt="Università degli Studi di Milano-Bicocca" onerror="this.style.display='none'">
+                        <span class="logo-placeholder">Milano-Bicocca Logo</span>
                     </div>
                 </div>
             </div>
