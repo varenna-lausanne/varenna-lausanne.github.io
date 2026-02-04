@@ -369,6 +369,49 @@
             color: var(--text-dark);
         }
 
+        /* Past Proceedings section */
+        .past-proceedings {
+            padding: 60px 20px;
+            background: var(--background-light);
+            text-align: center;
+        }
+
+        .past-proceedings h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .past-proceedings-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-medium);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .past-proceedings-link {
+            margin-top: 30px;
+        }
+
+        .proceedings-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        .proceedings-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -673,6 +716,18 @@
                     <p>A. WRIGHT (Wisconsin, USA)</p>
                     <p>F. ZONCA (Frascati, Italy)</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-proceedings">
+        <div class="container">
+            <h2>Past Proceedings and Conferences</h2>
+            <p class="past-proceedings-intro">
+                Explore the rich history of the Varenna-Lausanne Workshop, including past proceedings, abstracts, and conference materials from previous years.
+            </p>
+            <div class="past-proceedings-link">
+                <a href="https://varenna-lausanne.epfl.ch" target="_blank" class="proceedings-btn">View Past Proceedings & Conferences</a>
             </div>
         </div>
     </section>
