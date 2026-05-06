@@ -537,6 +537,60 @@
             .fee-amount {
                 font-size: 2rem;
             }
+
+            .speakers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Invited Speakers section */
+        .speakers {
+            padding: 60px 20px;
+            background: var(--background-light);
+        }
+
+        .speakers-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .speaker-card {
+            background: var(--background);
+            border-radius: 8px;
+            padding: 22px 26px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .speaker-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .speaker-affiliation {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .speaker-title {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+            font-style: italic;
         }
     </style>
 </head>
@@ -547,7 +601,7 @@
             <p class="subtitle">Joint Varenna-Lausanne International Workshop, since 1988</p>
             <p>"Piero Caldirola" International Centre for the Promotion of Science and International School of Plasma Physics</p>
             <a href="https://www.villamonastero.eu/en/home_en/" class="location-btn">Location: Villa Monastero, Varenna, Italy</a>
-            <a href="speakers.html" class="location-btn">Invited Speakers</a>
+
         </div>
     </header>
 
@@ -642,6 +696,161 @@
 
             <div class="payment-cta">
                 <a href="https://www.icpc.it/theory/theory-of-fusion-plasmas-2/" target="_blank" class="location-btn" aria-label="Please pay via this website (opens in new tab)">Please pay via this website</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="speakers">
+        <div class="container">
+            <h2>Invited Speakers 2026</h2>
+            <p class="speakers-intro">The following speakers have been invited to present at the 2026 Varenna-Lausanne Workshop, September 21–25, Varenna, Italy.</p>
+
+            <div class="speakers-grid">
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Acton, Georgia</div>
+                    <div class="speaker-affiliation">IPP Greifswald, Germany</div>
+                    <div class="speaker-title">Predicting zonal flows in stellarators</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Burby, Jack</div>
+                    <div class="speaker-affiliation">Austin University, Texas, USA</div>
+                    <div class="speaker-title">A statistical equilibrium model for stellarators</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Cai, Huishan</div>
+                    <div class="speaker-affiliation">USTC, Hefei, China</div>
+                    <div class="speaker-title">Multiscale gyrokinetic simulations of the interaction between turbulence and fishbones</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Choudhary, Sagar</div>
+                    <div class="speaker-affiliation">Institute for Plasma Research, India</div>
+                    <div class="speaker-title">Gyrokinetic Transport in flat-Temperature Tokamak Plasmas</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Costello, Paul</div>
+                    <div class="speaker-affiliation">IPP Greifswald, Germany</div>
+                    <div class="speaker-title">Constrained optimal modes: tightening thermodynamic bounds on the linear growth rate of microinstabilities</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">De Gianni, Ludovica</div>
+                    <div class="speaker-affiliation">CEA, France</div>
+                    <div class="speaker-title">Understanding Trapped Electron Modes in negative triangularity</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Devin, Emma G.</div>
+                    <div class="speaker-affiliation">PPPL, USA</div>
+                    <div class="speaker-title">Emergence of persistent advection-diffusion transport structure and nonlinear amplitude evolution of strongly driven instabilities</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Ekmark, Ida</div>
+                    <div class="speaker-affiliation">Chalmers, Sweden</div>
+                    <div class="speaker-title">Runaway electrons in quasi-axisymmetric stellarators</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Fitzgerald, Michael</div>
+                    <div class="speaker-affiliation">UKAEA, UK</div>
+                    <div class="speaker-title">Conservation and destruction of alpha particle invariants in optimized stellarators</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Foster, Thomas</div>
+                    <div class="speaker-affiliation">PPPL, USA</div>
+                    <div class="speaker-title">Alpha-particle orbits near rational flux surfaces in stellarators</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Goodman, Alan</div>
+                    <div class="speaker-affiliation">IPP Greifswald, Germany</div>
+                    <div class="speaker-title">Searching for SQuIDs: Developments in the optimisation of Stable Quasi-Isodynamic Designs</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Jurašić, Philipp</div>
+                    <div class="speaker-affiliation">Proxima Fusion, Germany</div>
+                    <div class="speaker-title">Designing stellarator island divertors by controlling the island flux</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Korger, David</div>
+                    <div class="speaker-affiliation">IPP Garching, Germany</div>
+                    <div class="speaker-title">A nonlinear Schrödinger equation for the description of geodesic-acoustic-modes in tokamaks</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Liu, Shiyang</div>
+                    <div class="speaker-affiliation">Zhejiang University, Hangzhou, China</div>
+                    <div class="speaker-title">Development of the Gyrokinetic-MHD Hybrid Code cuGMEC and Its Nonlinear Simulations of Alpha Particle-driven Alfvén Eigenmodes in ITER</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Maiden, Felicity</div>
+                    <div class="speaker-affiliation">UKAEA, UK</div>
+                    <div class="speaker-title">The theory behind solenoid-free microwave driven start-up in tokamaks</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">McClenaghan, Joey</div>
+                    <div class="speaker-affiliation">General Atomics, USA</div>
+                    <div class="speaker-title">Pedestal Stability and KBM/MTM Transport Limits in Tokamaks using QLGYRO</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Rivals, Nicolas</div>
+                    <div class="speaker-affiliation">CEA, France</div>
+                    <div class="speaker-title">Understanding of the X-Point Radiator regimes in tokamaks through an example in the WEST device</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Sengupta, Wrick</div>
+                    <div class="speaker-affiliation">Princeton University, USA</div>
+                    <div class="speaker-title">Periodic Korteweg-de Vries soliton potentials generate quasisymmetric magnetic field strength in both vacuum and finite plasma-beta equilibrium</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Schekochihin, Alex</div>
+                    <div class="speaker-affiliation">University of Oxford, UK</div>
+                    <div class="speaker-title">Tutorial: "As simple as possible but not simpler": physics of turbulence and transport via reduced fluid models</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Sun, Haomin</div>
+                    <div class="speaker-affiliation">EPFL, Switzerland</div>
+                    <div class="speaker-title">The unusual dynamics of turbulent transport in spherical tokamaks with large field line pitch angle</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Thienpondt, Hanne</div>
+                    <div class="speaker-affiliation">CIEMAT, Spain</div>
+                    <div class="speaker-title">Thresholds for turbulent heat transport in Wendelstein 7-X: Insights from massive gyrokinetic simulations and experimental measurements</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Velasco, José Luis</div>
+                    <div class="speaker-affiliation">CIEMAT, Spain</div>
+                    <div class="speaker-title">Tutorial: New avenues for stellarator design enabled by piecewise omnigenity</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Wang, Jialei</div>
+                    <div class="speaker-affiliation">NIFS, Japan</div>
+                    <div class="speaker-title">Comprehensive simulations of bursting shear Alfvén waves in tokamaks and their control via phase space engineering with ICRF waves</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Zhang, Kaiyu</div>
+                    <div class="speaker-affiliation">IPP Garching, Germany</div>
+                    <div class="speaker-title">Turbulence in the Quasicontinuous Exhaust Regime</div>
+                </div>
+
             </div>
         </div>
     </section>
