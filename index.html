@@ -303,7 +303,7 @@
         /* Committee section */
         .committee {
             padding: 60px 20px;
-            background: var(--background);
+            background: var(--background-light);
         }
 
         .committee h2 {
@@ -567,24 +567,20 @@
         .speakers-columns {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            column-gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .speakers-column {
-            background: var(--background-light);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
         .speaker-entry {
             padding: 14px 22px;
             border-bottom: 1px solid var(--border-color);
+            background: var(--background-light);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
-        .speaker-entry:last-child {
+        .speaker-entry:nth-last-child(-n+2) {
             border-bottom: none;
         }
 
@@ -723,11 +719,15 @@
 
             <div class="speakers-columns">
 
-                <div class="speakers-column">
                     <div class="speaker-entry">
                         <div class="speaker-name">Acton, Georgia</div>
                         <div class="speaker-affiliation">IPP Greifswald, Germany</div>
                         <div class="speaker-title">Predicting zonal flows in stellarators</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Korger, David</div>
+                        <div class="speaker-affiliation">IPP Garching, Germany</div>
+                        <div class="speaker-title">A nonlinear Schrödinger equation for the description of geodesic-acoustic-modes in tokamaks</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Burby, Jack</div>
@@ -735,67 +735,14 @@
                         <div class="speaker-title">A statistical equilibrium model for stellarators</div>
                     </div>
                     <div class="speaker-entry">
-                        <div class="speaker-name">Cai, Huishan</div>
-                        <div class="speaker-affiliation">USTC, Hefei, China</div>
-                        <div class="speaker-title">Multiscale gyrokinetic simulations of the interaction between turbulence and fishbones</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Choudhary, Sagar</div>
-                        <div class="speaker-affiliation">Institute for Plasma Research, India</div>
-                        <div class="speaker-title">Gyrokinetic Transport in flat-Temperature Tokamak Plasmas</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Costello, Paul</div>
-                        <div class="speaker-affiliation">IPP Greifswald, Germany</div>
-                        <div class="speaker-title">Constrained optimal modes: tightening thermodynamic bounds on the linear growth rate of microinstabilities</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">De Gianni, Ludovica</div>
-                        <div class="speaker-affiliation">CEA, France</div>
-                        <div class="speaker-title">Understanding Trapped Electron Modes in negative triangularity</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Devin, Emma G.</div>
-                        <div class="speaker-affiliation">PPPL, USA</div>
-                        <div class="speaker-title">Emergence of persistent advection-diffusion transport structure and nonlinear amplitude evolution of strongly driven instabilities</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Ekmark, Ida</div>
-                        <div class="speaker-affiliation">Chalmers, Sweden</div>
-                        <div class="speaker-title">Runaway electrons in quasi-axisymmetric stellarators</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Fitzgerald, Michael</div>
-                        <div class="speaker-affiliation">UKAEA, UK</div>
-                        <div class="speaker-title">Conservation and destruction of alpha particle invariants in optimized stellarators</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Foster, Thomas</div>
-                        <div class="speaker-affiliation">PPPL, USA</div>
-                        <div class="speaker-title">Alpha-particle orbits near rational flux surfaces in stellarators</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Goodman, Alan</div>
-                        <div class="speaker-affiliation">IPP Greifswald, Germany</div>
-                        <div class="speaker-title">Searching for SQuIDs: Developments in the optimisation of Stable Quasi-Isodynamic Designs</div>
-                    </div>
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Jurašić, Philipp</div>
-                        <div class="speaker-affiliation">Proxima Fusion, Germany</div>
-                        <div class="speaker-title">Designing stellarator island divertors by controlling the island flux</div>
-                    </div>
-                </div>
-
-                <div class="speakers-column">
-                    <div class="speaker-entry">
-                        <div class="speaker-name">Korger, David</div>
-                        <div class="speaker-affiliation">IPP Garching, Germany</div>
-                        <div class="speaker-title">A nonlinear Schrödinger equation for the description of geodesic-acoustic-modes in tokamaks</div>
-                    </div>
-                    <div class="speaker-entry">
                         <div class="speaker-name">Liu, Shiyang</div>
                         <div class="speaker-affiliation">Zhejiang University, Hangzhou, China</div>
                         <div class="speaker-title">Development of the Gyrokinetic-MHD Hybrid Code cuGMEC and Its Nonlinear Simulations of Alpha Particle-driven Alfvén Eigenmodes in ITER</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Cai, Huishan</div>
+                        <div class="speaker-affiliation">USTC, Hefei, China</div>
+                        <div class="speaker-title">Multiscale gyrokinetic simulations of the interaction between turbulence and fishbones</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Maiden, Felicity</div>
@@ -803,9 +750,19 @@
                         <div class="speaker-title">The theory behind solenoid-free microwave driven start-up in tokamaks</div>
                     </div>
                     <div class="speaker-entry">
+                        <div class="speaker-name">Choudhary, Sagar</div>
+                        <div class="speaker-affiliation">Institute for Plasma Research, India</div>
+                        <div class="speaker-title">Gyrokinetic Transport in flat-Temperature Tokamak Plasmas</div>
+                    </div>
+                    <div class="speaker-entry">
                         <div class="speaker-name">McClenaghan, Joey</div>
                         <div class="speaker-affiliation">General Atomics, USA</div>
                         <div class="speaker-title">Pedestal Stability and KBM/MTM Transport Limits in Tokamaks using QLGYRO</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Costello, Paul</div>
+                        <div class="speaker-affiliation">IPP Greifswald, Germany</div>
+                        <div class="speaker-title">Constrained optimal modes: tightening thermodynamic bounds on the linear growth rate of microinstabilities</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Rivals, Nicolas</div>
@@ -813,9 +770,19 @@
                         <div class="speaker-title">Understanding of the X-Point Radiator regimes in tokamaks through an example in the WEST device</div>
                     </div>
                     <div class="speaker-entry">
+                        <div class="speaker-name">De Gianni, Ludovica</div>
+                        <div class="speaker-affiliation">CEA, France</div>
+                        <div class="speaker-title">Understanding Trapped Electron Modes in negative triangularity</div>
+                    </div>
+                    <div class="speaker-entry">
                         <div class="speaker-name">Sengupta, Wrick</div>
                         <div class="speaker-affiliation">Princeton University, USA</div>
                         <div class="speaker-title">Periodic Korteweg-de Vries soliton potentials generate quasisymmetric magnetic field strength in both vacuum and finite plasma-beta equilibrium</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Devin, Emma G.</div>
+                        <div class="speaker-affiliation">PPPL, USA</div>
+                        <div class="speaker-title">Emergence of persistent advection-diffusion transport structure and nonlinear amplitude evolution of strongly driven instabilities</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Schekochihin, Alex</div>
@@ -823,9 +790,19 @@
                         <div class="speaker-title">Tutorial: "As simple as possible but not simpler": physics of turbulence and transport via reduced fluid models</div>
                     </div>
                     <div class="speaker-entry">
+                        <div class="speaker-name">Ekmark, Ida</div>
+                        <div class="speaker-affiliation">Chalmers, Sweden</div>
+                        <div class="speaker-title">Runaway electrons in quasi-axisymmetric stellarators</div>
+                    </div>
+                    <div class="speaker-entry">
                         <div class="speaker-name">Sun, Haomin</div>
                         <div class="speaker-affiliation">EPFL, Switzerland</div>
                         <div class="speaker-title">The unusual dynamics of turbulent transport in spherical tokamaks with large field line pitch angle</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Fitzgerald, Michael</div>
+                        <div class="speaker-affiliation">UKAEA, UK</div>
+                        <div class="speaker-title">Conservation and destruction of alpha particle invariants in optimized stellarators</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Thienpondt, Hanne</div>
@@ -833,9 +810,19 @@
                         <div class="speaker-title">Thresholds for turbulent heat transport in Wendelstein 7-X: Insights from massive gyrokinetic simulations and experimental measurements</div>
                     </div>
                     <div class="speaker-entry">
+                        <div class="speaker-name">Foster, Thomas</div>
+                        <div class="speaker-affiliation">PPPL, USA</div>
+                        <div class="speaker-title">Alpha-particle orbits near rational flux surfaces in stellarators</div>
+                    </div>
+                    <div class="speaker-entry">
                         <div class="speaker-name">Velasco, José Luis</div>
                         <div class="speaker-affiliation">CIEMAT, Spain</div>
                         <div class="speaker-title">Tutorial: New avenues for stellarator design enabled by piecewise omnigenity</div>
+                    </div>
+                    <div class="speaker-entry">
+                        <div class="speaker-name">Goodman, Alan</div>
+                        <div class="speaker-affiliation">IPP Greifswald, Germany</div>
+                        <div class="speaker-title">Searching for SQuIDs: Developments in the optimisation of Stable Quasi-Isodynamic Designs</div>
                     </div>
                     <div class="speaker-entry">
                         <div class="speaker-name">Wang, Jialei</div>
@@ -843,11 +830,15 @@
                         <div class="speaker-title">Comprehensive simulations of bursting shear Alfvén waves in tokamaks and their control via phase space engineering with ICRF waves</div>
                     </div>
                     <div class="speaker-entry">
+                        <div class="speaker-name">Jurašić, Philipp</div>
+                        <div class="speaker-affiliation">Proxima Fusion, Germany</div>
+                        <div class="speaker-title">Designing stellarator island divertors by controlling the island flux</div>
+                    </div>
+                    <div class="speaker-entry">
                         <div class="speaker-name">Zhang, Kaiyu</div>
                         <div class="speaker-affiliation">IPP Garching, Germany</div>
                         <div class="speaker-title">Turbulence in the Quasicontinuous Exhaust Regime</div>
                     </div>
-                </div>
 
             </div>
         </div>
