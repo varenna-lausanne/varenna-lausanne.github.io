@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programme for the Joint Varenna–Lausanne International Workshop on the Theory of Fusion Plasmas, September 21–25, 2026">
+    <title>Agenda – Varenna-Lausanne Workshop 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0074D9;
+            --primary-dark: #005BAD;
+            --primary-light: #BFE6FF;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6a6a6a;
+            --background: #ffffff;
+            --background-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent: #0074D9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--background);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary-light);
+            color: var(--text-dark);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.95;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Programme */
+        .programme {
+            padding: 60px 20px;
+            background: var(--background);
+        }
+
+        .day-block {
+            margin-bottom: 60px;
+        }
+
+        .day-heading {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-light);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .session-heading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            background: var(--background-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 16px;
+            margin: 30px 0 12px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .talk-row {
+            display: grid;
+            grid-template-columns: 110px 60px 1fr;
+            gap: 0 16px;
+            align-items: start;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .talk-row:last-child {
+            border-bottom: none;
+        }
+
+        .talk-time {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            white-space: nowrap;
+            padding-top: 2px;
+        }
+
+        .talk-id {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-light);
+            padding-top: 2px;
+        }
+
+        .talk-content {
+            min-width: 0;
+        }
+
+        .talk-speaker {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+
+        .talk-title {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .event-row {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 0 16px;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .event-row:last-child {
+            border-bottom: none;
+        }
+
+        .event-time {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .event-label {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+
+        .event-label.highlight {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .poster-block {
+            background: var(--background-light);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 12px 0;
+        }
+
+        .poster-block p {
+            color: var(--text-medium);
+            margin-bottom: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .contact a:hover {
+            background: white;
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .talk-row {
+                grid-template-columns: 95px 45px 1fr;
+                gap: 0 10px;
+            }
+
+            .event-row {
+                grid-template-columns: 95px 1fr;
+                gap: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Programme 2026</h1>
+            <p class="subtitle">Joint Varenna-Lausanne International Workshop on the Theory of Fusion Plasmas</p>
+            <p>Villa Monastero, Varenna, Italy &mdash; 21&ndash;25 September 2026</p>
+            <a href="index.html" class="back-btn">← Back to Main Page</a>
+        </div>
+    </header>
+
+    <main class="programme">
+        <div class="container">
+
+            <!-- Sunday -->
+            <div class="day-block">
+                <h2 class="day-heading">Sunday, 20 September 2026</h2>
+                <div class="event-row">
+                    <span class="event-time">16:00 – 19:00</span>
+                    <span class="event-label highlight">Registration in Villa Monastero</span>
+                </div>
+            </div>
+
+            <!-- Monday -->
+            <div class="day-block">
+                <h2 class="day-heading">Monday, 21 September 2026</h2>
+
+                <div class="event-row">
+                    <span class="event-time">9:00</span>
+                    <span class="event-label highlight">Welcome — G. Gorini and J. Graves</span>
+                </div>
+
+                <h3 class="session-heading">Session 1: Fundamental Theory of Turbulence and Transport</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">9:10</span>
+                    <span class="talk-id">I-1</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">A. Schekochihin</div>
+                        <div class="talk-title">Tutorial: "As simple as possible but not simpler": physics of turbulence and transport via reduced fluid models</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">9:55</span>
+                    <span class="talk-id">I-2</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">G. Acton</div>
+                        <div class="talk-title">Predicting zonal flows in stellarators</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">10:40</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:10</span>
+                    <span class="talk-id">I-3</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">J. Burby</div>
+                        <div class="talk-title">A statistical equilibrium model for stellarators</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:55</span>
+                    <span class="talk-id">I-4</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">P. Costello</div>
+                        <div class="talk-title">Constrained optimal modes: tightening thermodynamic bounds on the linear growth rate of microinstabilities</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:40</span>
+                    <span class="event-label highlight">Group photo in Villa Monastero's garden</span>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:50</span>
+                    <span class="event-label">Lunch</span>
+                </div>
+
+                <h3 class="session-heading">Session 2: Tokamak Plasma Regimes</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">15:00</span>
+                    <span class="talk-id">I-5</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">N. Rivals</div>
+                        <div class="talk-title">Understanding of the X-Point Radiator regimes in tokamaks through an example in the WEST device</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">15:45</span>
+                    <span class="talk-id">I-6</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">F. Maiden</div>
+                        <div class="talk-title">The theory behind solenoid-free microwave driven start-up in tokamaks</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">16:30</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">17:00</span>
+                    <span class="talk-id">I-7</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">K. Zhang</div>
+                        <div class="talk-title">Turbulence in the Quasicontinuous Exhaust Regime</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">17:45</span>
+                    <span class="event-label">End</span>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">19:30</span>
+                    <span class="event-label highlight">Welcome Party — Blanco Lounge Bar, Varenna</span>
+                </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-block">
+                <h2 class="day-heading">Tuesday, 22 September 2026</h2>
+
+                <h3 class="session-heading">Session 3: Fast Ions, Runaways and Heat Transport in Stellarators</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">9:00</span>
+                    <span class="talk-id">I-8</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">T. Foster</div>
+                        <div class="talk-title">Alpha-particle orbits near rational flux surfaces in stellarators</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">9:45</span>
+                    <span class="talk-id">I-9</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">M. Fitzgerald</div>
+                        <div class="talk-title">Conservation and destruction of alpha particle invariants in optimized stellarators</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">10:30</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:00</span>
+                    <span class="talk-id">I-10</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">I. Ekmark</div>
+                        <div class="talk-title">Runaway electrons in quasi-axisymmetric stellarators</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:45</span>
+                    <span class="talk-id">I-11</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">H. Thienpondt</div>
+                        <div class="talk-title">Thresholds for turbulent heat transport in Wendelstein 7-X: Insights from massive gyrokinetic simulations and experimental measurements</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:30</span>
+                    <span class="event-label">Lunch</span>
+                </div>
+
+                <div class="poster-block">
+                    <p><strong>14:30 – 16:00</strong> &nbsp; Poster session 1: P1 – P14</p>
+                    <p><strong>16:00 – 16:30</strong> &nbsp; Coffee break</p>
+                    <p><strong>16:30 – 18:00</strong> &nbsp; Poster session 2: P15 – P28</p>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-block">
+                <h2 class="day-heading">Wednesday, 23 September 2026</h2>
+
+                <h3 class="session-heading">Session 4: Microturbulent Transport and Gyrokinetics in Tokamaks</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">9:00</span>
+                    <span class="talk-id">I-12</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">H. Sun</div>
+                        <div class="talk-title">The unusual dynamics of turbulent transport in spherical tokamaks with large field line pitch angle</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">9:45</span>
+                    <span class="talk-id">I-13</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">L. De Gianni</div>
+                        <div class="talk-title">Understanding Trapped Electron Modes in negative triangularity</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">10:30</span>
+                    <span class="talk-id">I-14</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">S. Liu</div>
+                        <div class="talk-title">Development of the Gyrokinetic-MHD Hybrid Code cuGMEC and Its Nonlinear Simulations of Alpha Particle-driven Alfvén Eigenmodes in ITER</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">11:15</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:35</span>
+                    <span class="talk-id">I-15</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">S. Choudhary</div>
+                        <div class="talk-title">Gyrokinetic Transport in flat-Temperature Tokamak Plasmas</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">12:20</span>
+                    <span class="talk-id">I-16</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">J. McClenaghan</div>
+                        <div class="talk-title">Pedestal Stability and KBM/MTM Transport Limits in Tokamaks using QLGYRO</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">13:05</span>
+                    <span class="event-label">Lunch</span>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">19:30</span>
+                    <span class="event-label highlight">Conference dinner — Ristorante La Breva, Lierna (dinner at 20:00, bus at 19:30)</span>
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-block">
+                <h2 class="day-heading">Thursday, 24 September 2026</h2>
+
+                <h3 class="session-heading">Session 5: Stellarator Optimisation</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">9:00</span>
+                    <span class="talk-id">I-17</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">J. Velasco</div>
+                        <div class="talk-title">Tutorial: New avenues for stellarator design enabled by piecewise omnigenity</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">9:45</span>
+                    <span class="talk-id">I-18</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">W. Sengupta</div>
+                        <div class="talk-title">Periodic Korteweg-de Vries soliton potentials generate quasisymmetric magnetic field strength in both vacuum and finite plasma-beta equilibrium</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">10:30</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:00</span>
+                    <span class="talk-id">I-19</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">A. Goodman</div>
+                        <div class="talk-title">Searching for SQuIDs: Developments in the optimisation of Stable Quasi-Isodynamic Designs</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:45</span>
+                    <span class="talk-id">I-20</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">P. Jurašić</div>
+                        <div class="talk-title">Designing stellarator island divertors by controlling the island flux</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:30</span>
+                    <span class="event-label">Lunch</span>
+                </div>
+
+                <div class="poster-block">
+                    <p><strong>14:30 – 16:00</strong> &nbsp; Poster session 3: P29 – P42</p>
+                    <p><strong>16:00 – 16:30</strong> &nbsp; Coffee break</p>
+                    <p><strong>16:30 – 18:00</strong> &nbsp; Poster session 4: P43 – P56</p>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-block">
+                <h2 class="day-heading">Friday, 25 September 2026</h2>
+
+                <h3 class="session-heading">Session 6: Fast Ion and Nonlinear Physics in Tokamaks</h3>
+
+                <div class="talk-row">
+                    <span class="talk-time">9:00</span>
+                    <span class="talk-id">I-21</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">H. Cai</div>
+                        <div class="talk-title">Multiscale gyrokinetic simulations of the interaction between turbulence and fishbones</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">9:45</span>
+                    <span class="talk-id">I-22</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">D. Korger</div>
+                        <div class="talk-title">A nonlinear Schrödinger equation for the description of geodesic-acoustic-modes in tokamaks</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">10:30</span>
+                    <span class="event-label">Coffee break</span>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:00</span>
+                    <span class="talk-id">I-23</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">J. Wang</div>
+                        <div class="talk-title">Comprehensive simulations of bursting shear Alfvén waves in tokamaks and their control via phase space engineering with ICRF waves</div>
+                    </div>
+                </div>
+                <div class="talk-row">
+                    <span class="talk-time">11:45</span>
+                    <span class="talk-id">I-24</span>
+                    <div class="talk-content">
+                        <div class="talk-speaker">E. G. Devin</div>
+                        <div class="talk-title">Emergence of persistent advection-diffusion transport structure and nonlinear amplitude evolution of strongly driven instabilities</div>
+                    </div>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:30</span>
+                    <span class="event-label highlight">Closing session</span>
+                </div>
+                <div class="event-row">
+                    <span class="event-time">12:45</span>
+                    <span class="event-label">End</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact">
+                <a href="mailto:varenna-lausanne@epfl.ch">Contact: varenna-lausanne@epfl.ch</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
