@@ -202,6 +202,25 @@
             margin-bottom: 4px;
         }
 
+        .poster-list-section {
+            margin-top: 70px;
+        }
+
+        .poster-list-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 28px;
+        }
+
+        .poster-list-item {
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        .poster-list-item strong {
+            color: var(--text-dark);
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -239,6 +258,10 @@
             .event-row {
                 grid-template-columns: 95px 1fr;
                 gap: 0 10px;
+            }
+
+            .poster-list-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -578,6 +601,63 @@
                 <div class="event-row">
                     <span class="event-time">12:45</span>
                     <span class="event-label">End</span>
+                </div>
+            </div>
+
+            <div class="poster-list-section">
+                <h2 class="day-heading">Poster List</h2>
+                <div class="poster-list-grid">
+                    <p class="poster-list-item"><strong>P1:</strong> Kinetic ballooning modes and electromagnetic stability in W7-X — K. Aleynikova</p>
+                    <p class="poster-list-item"><strong>P2:</strong> Gyrokinetic investigation of zero magnetic shear regions in tokamaks — O. Anuaruly</p>
+                    <p class="poster-list-item"><strong>P3:</strong> Simplest Models of Tokamak MHD — Wayne Arter</p>
+                    <p class="poster-list-item"><strong>P4:</strong> Gyrokinetic analysis of internal transport barriers in stellarators — J. Ball</p>
+                    <p class="poster-list-item"><strong>P5:</strong> Reduced model of the interaction between microturbulence, energetic particles and energetic particle driven modes — T. Barberis</p>
+                    <p class="poster-list-item"><strong>P6:</strong> MHD Equilibria via Voigt Regularization — Andrew Brown</p>
+                    <p class="poster-list-item"><strong>P7:</strong> Analysis of the electromagnetic and electrostatic instability induced by runaway electrons in a magnetized plasma — A. Cardinali</p>
+                    <p class="poster-list-item"><strong>P8:</strong> Nonlinear saturation of Axisymmetric (n=0) modes driven by Energetic Particles in Tokamaks — S. Cavallero</p>
+                    <p class="poster-list-item"><strong>P9:</strong> Stellarator design points and optimized equilibria for compact high-field nuclear fusion reactors — F. Ceccherini</p>
+                    <p class="poster-list-item"><strong>P10:</strong> Application of ECRH and NBI in compact high-field stellarator nuclear fusion reactors — L. Galeotti</p>
+                    <p class="poster-list-item"><strong>P11:</strong> Minimal Model for Floquet Modes in a Tokamak — M. Evans</p>
+                    <p class="poster-list-item"><strong>P12:</strong> Validation and benchmarking of gyrokinetics in low-recycling lithiated conditions with Gkeyll and XGC — M. Francisquez</p>
+                    <p class="poster-list-item"><strong>P13:</strong> Effect of magnetic drift on the stability structure of the ambipolar condition in nonaxisymmetric plasmas — K. Fujita</p>
+                    <p class="poster-list-item"><strong>P14:</strong> Resonant staircase formation and zonal flow amplification in tokamak turbulence: the role of negative mass instability and mode synchronization — D. Del Sarto</p>
+                    <p class="poster-list-item"><strong>P15:</strong> Analytical approximation of the velocity distribution through the collisional layer — A. Geraldini</p>
+                    <p class="poster-list-item"><strong>P16:</strong> Continuous linear to nonlinear analytic treatment of tearing and double tearing modes with toroidal effects and fast particles — J. P. Graves</p>
+                    <p class="poster-list-item"><strong>P17:</strong> Bootstrap current beyond the near omnigenous asymptotic model — G. Graßler</p>
+                    <p class="poster-list-item"><strong>P18:</strong> Runaway-Electron Avalanches as a Branching Markov Process — S. Guinchard</p>
+                    <p class="poster-list-item"><strong>P19:</strong> Driftless Star: an end-to-end pipeline for transport-consistent stellarator optimization — R. K. Hashmani</p>
+                    <p class="poster-list-item"><strong>P20:</strong> Dynamics of ion temperature gradient modes in burning plasma conditions in the presence of energetic particles — R. Ivanov</p>
+                    <p class="poster-list-item"><strong>P21:</strong> kobra: a new Vlasov code with AMR — S. Konewko</p>
+                    <p class="poster-list-item"><strong>P22:</strong> Full-F Gyrofluid Vortex interaction with arbitrary wavelength Polarization — Franz. F. Locker</p>
+                    <p class="poster-list-item"><strong>P23:</strong> Second stability region for gyrokinetics and the L-H transition — R.J.J. Mackenbach</p>
+                    <p class="poster-list-item"><strong>P24:</strong> Global Fluid Turbulence Simulations of W7-X Internal Magnetic Island Configurations — M. Madeira</p>
+                    <p class="poster-list-item"><strong>P25:</strong> Reduced Magnetohydrodinamics studies on tungsten transport inside magnetic islands — Chiara Marchetto</p>
+                    <p class="poster-list-item"><strong>P26:</strong> Interpretation of the Dimits shift as a phase transition — L. N. Marquant</p>
+                    <p class="poster-list-item"><strong>P27:</strong> Kinetic modeling of emissive plasma sheath — A. Medouni</p>
+                    <p class="poster-list-item"><strong>P28:</strong> Fast ITG eigenmode-eigenfrequency prediction in general geometry — M.C.L. Morren</p>
+                    <p class="poster-list-item"><strong>P29:</strong> An improved knock-on operator for runaway avalanche modelling — Isabel Muzio</p>
+                    <p class="poster-list-item"><strong>P30:</strong> Direct optimization of steady-state plasma profiles in stellarators — E. Lascas Neto</p>
+                    <p class="poster-list-item"><strong>P31:</strong> Theory of nonlinear zonal flow dynamics in toroidal geometry — R. Nies</p>
+                    <p class="poster-list-item"><strong>P32:</strong> On the Shafranov shift in stellarators — P. Helander</p>
+                    <p class="poster-list-item"><strong>P33:</strong> The role of different nonlinearities in two-dimensional fluid ITG models — G. Paramasivam</p>
+                    <p class="poster-list-item"><strong>P34:</strong> Gradient-driven instabilities in 2D models for tokamak edge — F.I. Parra</p>
+                    <p class="poster-list-item"><strong>P35:</strong> Stellarator-Tokamak Hybrid configurations for representative TCV discharges — L. Rais</p>
+                    <p class="poster-list-item"><strong>P36:</strong> Convective-diffusive modeling of anomalous particle and energy transport in 2D interchange-dominated simulations. — O. Renders</p>
+                    <p class="poster-list-item"><strong>P37:</strong> Nonlinear interactions between energetic particles, Alfvén eigenmodes and ITG driven turbulence in global, gyrokinetic, electromagnetic simulations — B. Rofman</p>
+                    <p class="poster-list-item"><strong>P38:</strong> Assessing the effect of alpha-particle-driven modes on the fusion power gain in a burning plasma — J. Ruiz Ruiz</p>
+                    <p class="poster-list-item"><strong>P39:</strong> Understanding the sensitivities of the radial electric field between favorable and unfavorable configurations using SOLEDGE3X simulations — G. El Saifi</p>
+                    <p class="poster-list-item"><strong>P40:</strong> Plasma transport in a chaotic magnetic field using an MHD model — V. Simon</p>
+                    <p class="poster-list-item"><strong>P41:</strong> Nonlocal integral kernels for ICRH – Progress with the implementation into PSYDAC — C. Slaby</p>
+                    <p class="poster-list-item"><strong>P42:</strong> Guiding center motion in self-consistent axisymmetric mirror equilibria — C. D. Stephens</p>
+                    <p class="poster-list-item"><strong>P43:</strong> Adjoint-based trust region method with DGSEM discretization for MRxMHD in HKT slab geometry — Rongping Tang</p>
+                    <p class="poster-list-item"><strong>P44:</strong> Solving the phase-space relaxed MHD model: from cross-field flow to the weak ideal Ohm's law — A. Tavassoli</p>
+                    <p class="poster-list-item"><strong>P45:</strong> Stellarator Coil Optimization for Beta-Resilient Divertor Island Positioning — M. Titze</p>
+                    <p class="poster-list-item"><strong>P46:</strong> Electron-temperature-gradient turbulence and secondary-instability saturation with large density gradients — L.-P. Turica</p>
+                    <p class="poster-list-item"><strong>P47:</strong> Kinetic solutions to the stationary collisionless magnetised plasma sheath — Nicole Vadot</p>
+                    <p class="poster-list-item"><strong>P48:</strong> 3D JOREK simulations of runaway electron benign termination on TCV — C. Wang</p>
+                    <p class="poster-list-item"><strong>P49:</strong> Impacts of effective diffusion caused by electron temperature gradient turbulence — Tomo-Hiko Watanabe</p>
+                    <p class="poster-list-item"><strong>P50:</strong> Nonlinear frequency chirping of energetic-particle-driven geodesic acoustic modes — R. Wu</p>
+                    <p class="poster-list-item"><strong>P51:</strong> On the kinetic continuous spectrum in toroidal plasmas — F. Zonca</p>
                 </div>
             </div>
 
