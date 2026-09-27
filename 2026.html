@@ -158,12 +158,15 @@
 
         @media (max-width: 600px) {
             .talk-row {
-                grid-template-columns: 1fr;
-                gap: 4px 0;
+                grid-template-columns: 95px 45px;
+                gap: 4px 10px;
             }
             .talk-time,
             .talk-id {
                 padding-top: 0;
+            }
+            .talk-content {
+                grid-column: 1 / -1;
             }
             .event-row {
                 grid-template-columns: 1fr;
