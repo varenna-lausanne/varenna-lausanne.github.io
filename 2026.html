@@ -36,7 +36,7 @@
         .photo img { width: 100%; border-radius: 8px; margin-bottom: 12px; }
         .image-caption { font-style: italic; color: var(--text-medium); }
         .agenda-links { display: flex; flex-wrap: wrap; gap: 10px; }
-        #agenda { scroll-margin-top: 24px; }
+        .anchor-target { scroll-margin-top: 24px; }
 
         .speakers { padding: 60px 20px; background: #fff; }
         .speakers .container { max-width: 1200px; }
@@ -166,8 +166,8 @@
                 padding-top: 0;
             }
             .event-row {
-                grid-template-columns: 95px 1fr;
-                gap: 0 10px;
+                grid-template-columns: 1fr;
+                gap: 4px 0;
             }
             .poster-list-grid {
                 grid-template-columns: 1fr;
@@ -218,7 +218,8 @@
 
     <section class="programme">
         <div class="container">
-            <h2 id="agenda">Agenda</h2>
+            <div id="agenda" class="anchor-target" tabindex="-1"></div>
+            <h2>Agenda</h2>
             <p class="section-intro">Full programme for the Joint Varenna&ndash;Lausanne International Workshop on the Theory of Fusion Plasmas at Villa Monastero, Varenna, Italy, 21&ndash;25 September 2026.</p>
             <!-- Sunday -->
             <div class="day-block">
